@@ -2,14 +2,16 @@
 
 trigger:
 - master
-pool:
-- name:Default
 
-- script: echo My Gradle application
-displayName:'Run a one-line script'
+pool:
+  name: Default
+
+steps:
+- script: echo myazure gradle application
+  displayName: 'Running a gradle application'
 
 - script: gradle build
-displayName:'Build gradle'
+  displayName: 'building a gradle'
 
--script: gradle run
-displayName:'Run application'
+- script: gradle run
+  displayName: 'run a gradle application'
