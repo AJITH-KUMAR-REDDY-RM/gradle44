@@ -1,0 +1,17 @@
+
+
+trigger:
+- master
+
+pool:
+  name: Default
+
+steps:
+- script: echo myazure gradle application
+  displayName: 'Running a gradle application'
+
+- script: gradle build
+  displayName: 'building a gradle'
+
+- script: gradle run
+  displayName: 'run a gradle application'
